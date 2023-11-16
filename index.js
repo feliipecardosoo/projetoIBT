@@ -9,6 +9,15 @@ const app = express()
 const port = 3000
 const conn = require('./db/conn')
 
+// models 
+const Endereco = require('./models/endereco')
+const Evento = require('./models/evento')
+const Familia = require('./models/familia')
+const Membro = require('./models/membro')
+const User = require('./models/user')
+
+
+
 // template engine
 app.engine('handlebars', exphbs.engine())
 app.set('view engine', 'handlebars')
@@ -61,6 +70,7 @@ app.use((req,res,next) => {
 
 
 conn
+    //.sync({force: true })
     .sync()
     .then(() => {
         app.listen(port)
