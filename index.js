@@ -16,6 +16,11 @@ const Familia = require('./models/familia')
 const Membro = require('./models/membro')
 const User = require('./models/user')
 
+// Routes 
+const membrosRoutes = require('./routes/membrosRoutes')
+
+// Import Controller
+const MembrosController = require('./controllers/membrosController')
 
 
 // template engine
@@ -68,11 +73,15 @@ app.use((req,res,next) => {
 
 })
 
+// Routes
+app.use('/membros', membrosRoutes)
+app.get('/', MembrosController.mostrarMembros)
 
 conn
     //.sync({force: true })
     .sync()
     .then(() => {
         app.listen(port)
+        console.log('Server rodando')
     })
     .catch((err) => console.log(`Erro ao acessar a Porta!, ${err}`))
