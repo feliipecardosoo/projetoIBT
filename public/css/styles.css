@@ -16,7 +16,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: aqua;
     border-bottom: 1px solid #12373b;
 }
 
@@ -50,6 +49,78 @@
     padding: 2em;
 }
 
+/* Login e Register */
+
+#main-title {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #12373b;
+    color: #FFF;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+  
+  
+#auth-container {
+    border: 3px solid #12373b;
+    color: #000;
+    text-align: center;
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 25px;
+    border-radius: 20px;
+}
+ 
+  #auth-container a {
+    color: #000;
+    text-decoration: none;
+    transition: .5s;
+  }
+
+  #auth-container a:hover {
+    color: #3EB3AA;
+  }
+
+
+  #form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+  }
+
+  #form-control label {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
+  #form-control input,
+  #form-control textarea {
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #12373b;
+  }
+
+  form input[type='submit'],
+  .btn {
+    background-color: transparent;
+    color: #12373b;
+    border: 2px solid #12373b;
+    padding: .5em 1.2em;
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .5s;
+  }
+
+  form input[type='submit']:hover,
+  .btn:hover {
+    background-color: #12373b;
+    color: #FFF;
+  }
+
 /* FOOTER */
 footer {
     height: 150px;
@@ -61,5 +132,5 @@ footer {
 
 footer span {
     font-weight: bold;
-    color: #3EB3AA;
+    color: #12373b;
 }
