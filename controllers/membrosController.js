@@ -5,4 +5,7 @@ module.exports = class MembrosController {
     static async mostrarMembros(req,res) {
         res.render('membros/home')
     }
+    static async dashboard (req,res) {
+        res.render('membros/dashboard')  
+    }
 }
