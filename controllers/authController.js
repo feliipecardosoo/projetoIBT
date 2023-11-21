@@ -31,7 +31,7 @@ module.exports = class AuthController {
         req.session.userid = user.id
 
         req.session.save(() => {
-            res.redirect('/')
+            res.redirect('/membros')
         })
 
     }
@@ -75,7 +75,7 @@ module.exports = class AuthController {
             req.session.userid = createdUser.id
 
             req.session.save(() => {
-                res.redirect('/')
+                res.redirect('membros')
             })
 
         } catch (error) {

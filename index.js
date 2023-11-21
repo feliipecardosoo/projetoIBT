@@ -75,9 +75,9 @@ app.use((req,res,next) => {
 })
 
 // Routes
-app.use('/membros', membrosRoutes)
 app.use('/', authRoutes)
-app.get('/', MembrosController.mostrarMembros)
+app.use('/membros', membrosRoutes)
+app.get('/', MembrosController.membros)
 
 conn
     //.sync({force: true })
