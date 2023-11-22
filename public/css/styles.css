@@ -146,3 +146,52 @@ footer span {
     font-weight: bold;
     color: #12373b;
 }
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button {
+  flex: 1;
+  max-width: 800px;
+  height: 200px;
+  padding: 10px;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Helvetica', sans-serif;
+  color: #000;
+  transition: background-color 0.5s;
+}
+
+.button i,
+.button span {
+  font-size: 4em;
+  margin-bottom: 10px;
+  background-color: #eee;
+  transition: background-color 0.5s;
+}
+
+.button:hover {
+  background-color: #ddd;
+}
+
+.button:hover i,
+.button:hover span {
+  background-color: #ddd;
+}
+
+.button span {
+  font-size: 1.2em;
+  font-weight: bold; 
+  color: #000; 
+  margin-top: 20px; /* Ajuste o valor para mover o texto para baixo */
+}
