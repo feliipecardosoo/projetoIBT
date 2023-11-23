@@ -10,9 +10,6 @@ const port = 3000
 const conn = require('./db/conn')
 
 // models 
-const Endereco = require('./models/endereco')
-const Evento = require('./models/evento')
-const Familia = require('./models/familia')
 const Membro = require('./models/membro')
 const User = require('./models/user')
 

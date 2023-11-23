@@ -147,29 +147,12 @@ footer span {
     color: #12373b;
 }
 
-.button-container {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
 .button {
-  flex: 1;
-  max-width: 800px;
-  height: 200px;
-  padding: 10px;
-  border: none;
-  background-color: #eee;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Helvetica', sans-serif;
-  color: #000;
-  transition: background-color 0.5s;
+  text-decoration: none; /* Remova a decoração de texto dos links */
 }
 
 .button i,
@@ -191,7 +174,84 @@ footer span {
 
 .button span {
   font-size: 1.2em;
-  font-weight: bold; 
-  color: #000; 
+  font-weight: bold;
+  color: #000;
   margin-top: 20px; /* Ajuste o valor para mover o texto para baixo */
 }
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button {
+  flex: 1;
+  max-width: 800px;
+  height: 200px;
+  padding: 10px;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+  font-family: 'Helvetica', sans-serif;
+  color: #000;
+  transition: background-color 0.5s;
+}
+
+/* Estilo para o formulário */
+
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+legend {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  background-color: transparent;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+  width: calc(100% - 16px); /* Ajuste conforme necessário */
+  min-width: 200px; /* Ajuste conforme necessário */
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
