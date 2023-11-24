@@ -1,0 +1,17 @@
+
+<div class="container-member">
+  <h1>Excluir:</h1>
+  <ul class="member-list">
+    {{#each membrosData as |membro|}}
+      <form action="/membros/delete" method="post">
+        <li class="member-item" data-membro-id="{{membro.membroId}}">
+          Membro: {{membro.nome}} 
+          <span class="actions">
+            <input type="hidden" name="id" value="{{membro.membroId}}">
+            <input type="submit" value="Excluir" class="btn-member">
+          </span>
+        </li>
+      </form>
+    {{/each}}
+  </ul>
+</div>

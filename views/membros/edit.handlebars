@@ -1,0 +1,16 @@
+ <div class="container-member">
+    <form action="/">
+ <h1>Editar:</h1>
+    <ul class="member-list">
+        {{#each nomes as |nome membroId|}}
+    <li class="member-item" data-membro-id="{{membroId}}">
+      {{nome}} (ID: {{membroId}})
+      <span class="actions">
+          <input type="hidden" name="id" value="{{membroId}}">
+      </span>
+      </li>
+      <a href="/" class="btn-member">Editar</a>
+      </form>
+  {{/each}}
+    </ul>
+</div>

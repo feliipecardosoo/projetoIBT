@@ -23,6 +23,15 @@
     color: #000000;
 }
 
+#navbar .dashboard-link {
+  transition: .7s;
+  color: #3EB3AA; 
+}
+
+#navbar .dashboard-link:hover {
+  color: #12373b; 
+}
+
 #navbar ul {
     display: flex;
     list-style: none;
@@ -255,3 +264,74 @@ input[type="submit"]:hover {
   background-color: #45a049;
 }
 
+.container-member {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 0; /* Alterado para 0 para que a lista comece no topo */
+}
+
+
+.member-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  align-items: flex-start;
+}
+
+.member-list li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  width: 250px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.member-list li:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.member-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  width: 250px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.member-item:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.btn-member {
+  display: block;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #4CAF50; /* Cor da borda */
+  color: #4CAF50; /* Cor do texto */
+  background-color: #fff; /* Cor de fundo */
+  border-radius: 5px; /* Adicionando border-radius */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  margin-top: 10px; /* Adicionando espaço superior de 10 pixels (ajuste conforme necessário) */
+}
+
+.btn-member:hover {
+  background-color: #4CAF50; /* Cor de fundo ao passar o mouse */
+  color: #fff; /* Cor do texto ao passar o mouse */
+  border-color: #fff; /* Cor da borda ao passar o mouse */
+}

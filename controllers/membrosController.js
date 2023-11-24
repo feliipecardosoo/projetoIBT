@@ -6,6 +6,48 @@ module.exports = class MembrosController {
     static async dashboard (req,res) {
         res.render('membros/dashboard')  
     }
+    static async deleteMembro(req, res) {
+        try {
+          const membros = await Membro.findAll();
+      
+          // Mapeia um objeto para cada membro com nome e id
+          const membrosData = membros.map((membro) => ({
+            nome: membro.dataValues.nome,
+            membroId: membro.dataValues.id,
+          }));
+      
+          console.log(membrosData);
+      
+          // Renderiza a view e passa a lista de membros como variável
+          res.render('membros/delete', { membrosData });
+        } catch (error) {
+          console.log(`Nao foi possivel listar os membros ${error}`);
+        }
+      }
+      
+      static async deleteMembroPost(req, res) {
+        const id = req.body.id;
+      
+        await Membro.destroy({ where: { id: id } });
+      
+        // Redireciona para a página de listagem de membros
+        res.redirect('/membros/delete');
+      }
+    static async editMembroPost (req,res) {
+  
+        try {
+            const membros = await Membro.findAll();
+            const nomes = membros.map((membro) => membro.dataValues.nome);
+            const membroId = membros.map((membro) => membro.dataValues.id);
+            console.log(membroId)
+
+            // Renderiza a view e passa a lista de membros como variável
+            res.render('membros/edit', { nomes, membroId});
+        } catch (error) {
+            console.log(`Nao foi possivel listas os membros ${error}`)
+        }
+
+    }
     static createMembro (req,res) {
         res.render('membros/create')
     }
