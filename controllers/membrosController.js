@@ -16,8 +16,6 @@ module.exports = class MembrosController {
             membroId: membro.dataValues.id,
           }));
       
-          console.log(membrosData);
-      
           // Renderiza a view e passa a lista de membros como variável
           res.render('membros/delete', { membrosData });
         } catch (error) {

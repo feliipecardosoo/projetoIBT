@@ -7,10 +7,6 @@ const Membro = db.define('Membro', {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    email: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
     telefone:{
         type: DataTypes.STRING,
     },
@@ -18,14 +14,8 @@ const Membro = db.define('Membro', {
         type: DataTypes.DATE,
         allowNull: false,
     },
-    instagram: {
-        type: DataTypes.STRING,
-    },
     conjuge: {
         type: DataTypes.STRING,
-    },
-    data_conversao: {
-        type: DataTypes.DATE,
     },
     data_batismo: {
         type: DataTypes.DATE,
